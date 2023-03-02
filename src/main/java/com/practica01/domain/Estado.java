@@ -1,7 +1,6 @@
 package com.practica01.domain;
 
 import jakarta.persistence.*;
-import jakarta.persistence.Table;
 import java.io.Serializable;
 import lombok.Data;
 
@@ -9,24 +8,23 @@ import lombok.Data;
 @Entity
 @Table(name = "estado")
 public class Estado implements Serializable {
-
     private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idEstado;
+    private Long id;
 
     private String poblacion;
-    private String nomEstado;
+    private String nombrestado;
     private String capital;
     private String costas;
     
     public Estado() {
     }
 
-    public Estado(String poblacion, String nomEstado, String capital, String costas) {
+    public Estado(String poblacion, String nombrestado, String capital, String costas) {
         this.poblacion = poblacion;
-        this.nomEstado = nomEstado;
+        this.nombrestado = nombrestado;
         this.capital = capital;
         this.costas = costas;
     }

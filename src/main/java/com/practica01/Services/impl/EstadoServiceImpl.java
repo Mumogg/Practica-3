@@ -20,7 +20,7 @@ public class EstadoServiceImpl implements estadoService{
 
     @Override
     public Estado getEstado(Estado estado) {
-        return eDao.findById(estado.getIdEstado()).orElse(null);
+        return eDao.findById(estado.getId()).orElse(null);
     }
 
     @Override
