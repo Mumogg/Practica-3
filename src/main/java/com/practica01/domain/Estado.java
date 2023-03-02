@@ -14,7 +14,7 @@ public class Estado implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idEstado;
+    private Long idEstado;
 
     private String poblacion;
     private String nomEstado;

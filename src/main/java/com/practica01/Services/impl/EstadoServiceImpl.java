@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.practica01.Services.impl;
 
 import java.util.List;
@@ -12,18 +8,32 @@ import com.practica01.domain.Estado;
 import com.practica01.Services.estadoService;
 
 @Service
-public class EstadoServiceImpl {
+public class EstadoServiceImpl implements estadoService{
 
     @Autowired
     private estadoDao eDao;
 
-    public estadoDao geteDao() {
-        return eDao;
+    @Override
+    public List<Estado> getEstado() {
+        return(List<Estado>) eDao.findAll();
     }
 
-    public void seteDao(estadoDao eDao) {
-        this.eDao = eDao;
+    @Override
+    public Estado getEstado(Estado estado) {
+        return eDao.findById(estado.getIdEstado()).orElse(null);
     }
+
+    @Override
+    public void deleteEstado(Estado estado) {
+        eDao.delete(estado);
+    }
+
+    @Override
+    public void saveEstado(Estado estado) {
+        eDao.save(estado);
+    }
+
+    
 
     
 }

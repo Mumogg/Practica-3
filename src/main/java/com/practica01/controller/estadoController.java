@@ -20,7 +20,8 @@ public class estadoController {
         model.addAttribute("estado", estado);
         return "index";
     }
-
+    
+    @GetMapping("/estado/eliminar/")
     public String eliminaCliente(Estado estado) {
         eService.deleteEstado(estado);
         return "redirect:/";
