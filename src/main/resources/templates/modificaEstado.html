@@ -13,6 +13,12 @@
         <a th:href="@{/}">Regresar</a>   
         
         <form th:action="@{/estado/guardar}" method="post" th:object="${estado}">
+            <label></label>
+            <input type="hidden" 
+                   name="id" 
+                   value="" 
+                   th:field="*{id}"
+                   size="30" />
             <label>Poblacion</label>
             <input type="text" 
                    name="poblacion" 
