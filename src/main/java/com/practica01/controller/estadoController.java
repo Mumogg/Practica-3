@@ -29,7 +29,7 @@ public class estadoController {
 
     @GetMapping("/estado/nuevo")
     public String nuevoEstado(Estado estado) {
-        return "modificaCliente";
+        return "modificaEstado";
     }
 
     @PostMapping("/estado/guardar")

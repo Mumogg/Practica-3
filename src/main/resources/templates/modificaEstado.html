@@ -1,11 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
     <head>
-        <title>TODO supply a title</title>
+        <title>Tienda</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/estilos1.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <div>TODO write content</div>
+        <h2>Estado de Paises</h2>
+        <br>
+        <hr>
+        <a th:href="@{/}">Regresar</a>   
+        
+        <form th:action="@{/estado/guardar}" method="post" th:object="${estado}">
+            <label>Poblacion</label>
+            <input type="hidden" 
+                   name="poblacion" 
+                   value="" 
+                   th:field="*{poblacion}"
+                   size="30" />
+            <label>Poblacion</label>
+            <input type="text" 
+                   name="poblacion" 
+                   value="" 
+                   th:field="*{poblacion}"
+                   size="30" />
+            <br>
+            <label>Nombre Estado</label>
+            <input type="text" 
+                   name="nombrestado" 
+                   value="" 
+                   th:field="*{nombrestado}"
+                   size="30" />
+            <br>
+             <label>Capital</label>
+            <input type="text" 
+                   name="capital" 
+                   value="" 
+                   th:field="*{capital}"
+                   size="30" />
+            <br>
+            <label>Costas</label>
+            <input type="text" 
+                   name="costas" 
+                   value="" 
+                   th:field="*{costas}"
+                   size="30" />
+            <br>
+            <input type="submit" value="Guardar" />
+            
+        </form>
     </body>
 </html>
