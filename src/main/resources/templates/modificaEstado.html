@@ -14,19 +14,13 @@
         
         <form th:action="@{/estado/guardar}" method="post" th:object="${estado}">
             <label>Poblacion</label>
-            <input type="hidden" 
-                   name="poblacion" 
-                   value="" 
-                   th:field="*{poblacion}"
-                   size="30" />
-            <label>Poblacion</label>
             <input type="text" 
                    name="poblacion" 
                    value="" 
                    th:field="*{poblacion}"
                    size="30" />
             <br>
-            <label>Nombre Estado</label>
+            <label>Estado</label>
             <input type="text" 
                    name="nombrestado" 
                    value="" 
